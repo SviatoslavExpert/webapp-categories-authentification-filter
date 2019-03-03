@@ -1,7 +1,5 @@
 package com.granovskiy;
 
-import com.granovskiy.controller.LoginUserController;
-
 import com.granovskiy.controller.GetAllCategoriesController;
 import com.granovskiy.controller.GetCategoryByIdController;
 import com.granovskiy.controller.LoginUserController;

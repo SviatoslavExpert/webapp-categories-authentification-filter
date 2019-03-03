@@ -7,7 +7,7 @@ public class User {
     private String firstName;
     private String lastName;
 
-    private User(String username, String password, String token, String firstName, String lastName) {
+    public User(String username, String password, String token, String firstName, String lastName) {
         this.username = username;
         this.password = password;
         this.token = token;

@@ -1,4 +1,4 @@
-package com.granovskiy;
+package com.granovskiy.web;
 
 import com.granovskiy.controller.Controller;
 
@@ -8,9 +8,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import static com.granovskiy.Factory.*;
+
 
 public class MainServlet extends HttpServlet {
 
@@ -43,6 +45,11 @@ public class MainServlet extends HttpServlet {
     private void processViewModel(ViewModel vm, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //vm.getAttributes().forEach((k, v) -> req.setAttribute(k, v));
         vm.getAttributes().forEach(req::setAttribute);
+        processCookies(vm.getCookies(), resp);
         req.getRequestDispatcher(vm.getRedirectUri()).forward(req, resp);
+    }
+
+    private void processCookies(List<Cookie> cookie, HttpServletResponse resp) {
+        cookie.forEach(c -> resp.addCookie(new javax.servlet.http.Cookie(c.getName(), c.getValue())));
     }
 }

@@ -1,4 +1,4 @@
-package com.granovskiy;
+package com.granovskiy.web;
 
 import java.util.Map;
 import java.util.Objects;

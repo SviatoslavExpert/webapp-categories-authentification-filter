@@ -1,8 +1,8 @@
 package com.granovskiy.controller;
 
-import com.granovskiy.Request;
-import com.granovskiy.ViewModel;
+import com.granovskiy.web.Request;
+import com.granovskiy.web.ViewModel;
 
 public interface Controller {
-    ViewModel process(Request req);
+        ViewModel process(Request req);
 }

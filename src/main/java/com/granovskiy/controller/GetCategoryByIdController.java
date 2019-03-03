@@ -1,7 +1,7 @@
 package com.granovskiy.controller;
 
-import com.granovskiy.Request;
-import com.granovskiy.ViewModel;
+import com.granovskiy.web.Request;
+import com.granovskiy.web.ViewModel;
 import com.granovskiy.service.CategoryService;
 
 import static java.util.Collections.emptyList;
